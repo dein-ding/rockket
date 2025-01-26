@@ -6,3 +6,5 @@ startCommand = 'DATABASE_URL=$DATABASE_BASE_URL/main npx nx run rockket-backend:
 
 [environments.pr.deploy]
 startCommand = 'DATABASE_URL=$DATABASE_BASE_URL/pr-$(bash ../scripts/get-pull-number-from-branch.sh $RAILWAY_GIT_BRANCH) npx nx run rockket-backend:serve-production'
+
+buildCommand = 'npx nx build rockket-backend:production'
